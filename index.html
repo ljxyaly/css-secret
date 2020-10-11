@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div id="app" class="u-flex u-row-center u-col-top">
+    <div id="app" class="u-flex u-row-center u-col-top" v-cloak>
         <div id="left">
             <el-collapse v-model="currentLeftIndex" accordion>
                 <el-collapse-item v-for="(item,index) in nav" :title="item.title" :name="index" :key="index">
