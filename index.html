@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS揭秘</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="app" class="u-flex u-row-center u-col-top">
+        <div id="left">
+            <el-collapse v-model="currentLeftIndex" accordion>
+                <el-collapse-item v-for="(item,index) in nav" :title="item.title" :name="index" :key="index">
+                    <ul>
+                        <li v-for="(item1,index1) in item.list" :key="index1">{{ item1.title }}</li>
+                    </ul>
+                </el-collapse-item>
+            </el-collapse>
+        </div>
+        <div id="right" class="u-flex-1">
+        </div>
+    </div>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
